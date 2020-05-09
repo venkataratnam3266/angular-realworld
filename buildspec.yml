@@ -22,4 +22,4 @@ artifacts:
         - '**/*'
     base-directory: 'dist*'
     discard-paths: yes
-© 2020 GitHub, Inc.
+#© 2020 GitHub, Inc.
