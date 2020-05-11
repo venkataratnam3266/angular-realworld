@@ -1,8 +1,4 @@
 version: 0.1
-environment_variables:
-    plaintext:
-        S3_BUCKET: "angularrepo"
-        BUILD_ENV: "prod"
 phases:
     install:
         commands:
@@ -13,7 +9,7 @@ phases:
         commands:
             - echo Build started on `date`
             - ng build --prod
-            - cp appspec.yml dist
+            
 #    post_build:
  #        commands:
 #            - aws s3 cp dist s3://${S3_BUCKET} --recursive
@@ -23,4 +19,3 @@ artifacts:
         - '**/*'
     base-directory: 'dist*'
     discard-paths: yes
-#© 2020 GitHub, Inc.
