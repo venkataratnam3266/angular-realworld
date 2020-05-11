@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /dist/*
     destination: /var/www/html/
 hooks:
   ApplicationStop:
@@ -11,7 +11,7 @@ hooks:
   BeforeInstall:
     - location: scripts/undeploy_oldfiles.sh 
       timeout: 300
-      runas: root     
+      runas: root
   ApplicationStart:
     - location: scripts/start_apache.sh
       timeout: 300
