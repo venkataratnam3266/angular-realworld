@@ -9,7 +9,7 @@ hooks:
       timeout: 300
       runas: root
   BeforeInstall:
-    - location: scripts/undeploy-oldfiles.sh 
+    - location: scripts/undeploy_oldfiles.sh 
       timeout: 300
       runas: root     
   ApplicationStart:
